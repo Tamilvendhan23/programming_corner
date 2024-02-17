@@ -16,27 +16,23 @@ IMPORTANT:
 
 
 ------------------------------solution-------------------------------
-import java.sql.*;
 
-public class MobileDataRetriever {
     
-    public void execute(Connection conn) throws SQLException {
-        String query = "SELECT id, brandname, modelname, price FROM mobile ORDER BY brandname ASC";
-        
-        Statement stmt = conn.createStatement();
-        ResultSet rs = stmt.executeQuery(query);
-        
-        while (rs.next()) {
-            int id = rs.getInt("id");
-            String brandname = rs.getString("brandname");
-            String modelname = rs.getString("modelname");
-            int price = rs.getInt("price");
-            
-            // Process retrieved data here
-        }
-        
-        rs.close();
-        stmt.close();
-    }
-}
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Scanner;
+public class Hello {
+    public static void execute(Connection conn, Scanner sc) {
+        try{
+            String SQL_query_string = "SELECT * FROM mobile ORDER BY brandname";            
+             PreparedStatement prepared_statement = conn.prepareStatement(SQL_query_string);            
+             ResultSet result_set = prepared_statement.executeQuery();  
+            while(result_set.next()){
+                System.out.println(result_set.getString(1) + " " + result_set.getString(2) + " " + result_set.getString(3) + " " + result_set.getString(4));
+                                 }
+        }catch(Exception exception){}
+    }//end of execute method
+}//end of Hello class
 
