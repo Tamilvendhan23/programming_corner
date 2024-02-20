@@ -26,3 +26,26 @@ Output:
 *****97****************
 ***99******************
 107******************** 
+
+
+
+----------------------solution--------------------
+
+
+
+s=input().strip()
+l=[ord(i) for i in s]
+
+p,k=0,0
+
+for i in 1:
+
+     p+=len(str(i))
+
+for i in 1:
+
+     print('*'*(p-len(str(i))), i, '*'*k, sep='')
+
+     p-=len(str(i))
+
+     k+=len(str(i))
