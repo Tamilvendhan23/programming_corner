@@ -12,4 +12,27 @@ IMPORTANT:
 ---------------------solution--------------------
 
 
-**coming soon**
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class Hello {
+
+    public static void execute(Connection conn, Scanner sc) {
+       try
+       {
+       PreparedStatement ps = conn.prepareStatement("select name,author from book where publishedyear!=2009 order by name");
+       ResultSet rs = ps.executeQuery();
+        while((rs.next()))
+        {
+             System.out.println(rs.getString(1)+" "+rs.getString(2));
+        }
+       }
+       catch(Exception e)
+       {
+           System.out.println("Database not connected");
+       }
+	 }//end of execute method
+}//end of Hello class
