@@ -29,12 +29,14 @@ the Early bird worm catches
 '''
 ------------------solution-------------------
 
-def count_cons(s):
-    cons = "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ"
-    return sum(1 for char in s if char in cons)
+def consctr(s):
+    ctr=0
+    for i in s:
+        if i not in 'aeiouAEIOU' and i.isalpha():
+            ctr+=1
+    return ctr
 
-n = int(input())
-strings = input().split()
-sorted_strings = sorted(strings, key=lambda x: (count_cons(x), strings.index(x)))
-print(' '.join(sorted_strings))
-
+n=int(input())
+lis=input().split()
+lis.sort(key=consctr)
+print(*lis)
