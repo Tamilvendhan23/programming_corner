@@ -27,15 +27,15 @@ Output:
 
 ---------------------------------solution--------------------------------
 
-def result(string):
-    length = len(string)
-    for i in range(length // 2, 0, -1):
-        prefix = string[:i]
-        suffix = string[length - i:]
-        if prefix == suffix[::-1]:
-            return string[i:length - i]
-    return -1
-s = input().strip()
-print(result(s))
-
+a=input().strip()
+b=a[::-1]
+l=len(a)
+for i in range(l):
+    if a[i]!=b[i]:
+        break
+t=(a[i:l-i])
+if len(t)==0:
+    print("-1")
+else:
+    print(t)
 
