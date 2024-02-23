@@ -18,5 +18,10 @@ rpmsqut
 Output:
 m
 ---------------solution---------------------
-
+s = list(map(ord, input().strip()))
+h = {} ; s = sorted(s) 
+if s[1] - s[0] != s[2] - s[1]:
+    print(chr(s[0]))
+else:
+    print(chr(s[-1]))
  
