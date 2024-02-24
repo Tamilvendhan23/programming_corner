@@ -20,3 +20,30 @@ Output:
 Array: 1 3 5 7                                                                                                                                                                                                #include <stdio.h>
 
 -------------------------------------solution----------------------------
+
+
+#include <stdio.h>
+#include <stdlib.h>
+void addWithPrevious(int arr[], int N)
+{
+for(int i=N;i>0;i--){
+    arr[i]=arr[i]+arr[i-1];
+}
+}
+int main()
+{
+    int N;
+    scanf("%d",&N);
+    int arr[N];
+    for(int index = 0; index < N; index++)
+    {
+        scanf("%d",&arr[index]);
+    }
+    addWithPrevious(arr, N);
+    printf("Array: ");
+    for(int index = 0; index < N ; index++)
+    {
+      printf("%d ", arr[index]);
+    }
+    return 0;
+}
