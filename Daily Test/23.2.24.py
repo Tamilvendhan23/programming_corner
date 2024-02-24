@@ -19,3 +19,7 @@ Output:
 
 ---------------------solution---------------------
 
+n=int(input());s=1
+for i in range(n):
+    print(s*(s+1)*(s+2),end=" ")
+    s+=3
