@@ -34,3 +34,10 @@ There 14 integers from 4987 to 8959 which contain the integer 510 as a subset.
 
 
 _----------------_------solution-------------------------
+
+x,y,z=map(int,input().split())
+c=0
+for i in range(x,y+1):
+    if str(z) in str(i):
+        c+=1
+print(c)
