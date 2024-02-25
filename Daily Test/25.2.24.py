@@ -20,4 +20,11 @@ Input: CBADEFGHIjkl
 MNOPQRSTuvwXYZ 
 Output: no
 -------------------------------------solution-------------------
+s1=input().strip()
+s2=input().strip()
+leng=len(s1)+len(s2)
+if (s1.isupper() and s2.isupper() and leng==24):
+    print("yes")
+else:
+    print("no")
 
