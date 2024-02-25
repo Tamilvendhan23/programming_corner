@@ -36,3 +36,11 @@ Output:
 
 ---------------------------------solution----------------------
 
+x=int(input())
+y=list(map(int,input().split()))
+z=list(map(int,input().split()))
+if z==y[::-1]:
+    print(1)
+else:
+    print(0)
+
