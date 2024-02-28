@@ -41,3 +41,32 @@ Output:
 
 
 ____________________________solution________________________
+
+def replace_zero(matrix):
+    rows = len(matrix)
+    cols = len(matrix[0])
+
+    zero_rows = set()
+    zero_cols = set()
+
+    for i in range(rows):
+        for j in range(cols):
+            if matrix[i][j] == 0:
+                zero_rows.add(i)
+                zero_cols.add(j)
+
+    for i in range(rows):
+        for j in range(cols):
+            if i in zero_rows or j in zero_cols:
+                matrix[i][j] = 0
+
+    return matrix
+
+# Input
+R, C = map(int, input().split())
+matrix = [list(map(int, input().split())) for _ in range(R)]
+
+# Output
+modified_matrix = replace_zero(matrix)
+for row in modified_matrix:
+    print(*row)
