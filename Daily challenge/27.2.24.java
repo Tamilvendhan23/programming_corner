@@ -21,9 +21,25 @@ import java.util.Scanner;
 public class Hello {
 
     public static void execute(Connection conn, Scanner sc) {
-// Here your code
-
-    
-    
-  }
-}
+    try{
+        PreparedStatement s=conn.prepareStatement(
+             "insert into student values(?,?,?,?,?)"  
+        );
+        s.setString(1,"1");
+        s.setString(2,"Student1");
+        s.setString(3,"85");
+        s.setString(4,"95");
+        s.setString(5,"89");
+        int rowsAffected=s.executeUpdate();
+        s.setString(1,"2");
+        s.setString(2,"Student2");
+        s.setString(3,"91");
+        s.setString(4,"96");
+        s.setString(5,"93");
+        rowsAffected=s.executeUpdate();
+    }
+    catch (SQLException e){
+        
+    }
+    }//end of execute method
+}//end of
