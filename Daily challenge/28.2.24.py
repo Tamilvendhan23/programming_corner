@@ -33,3 +33,9 @@ northeastwestsouth
 Output:
 huttt"
  -----------------------solution----------------------
+s=input().strip()
+k=len(s)-1
+for i in range(2,len(s)+10):
+    if k<len(s) and k>=0:
+        print(s[k],end="")
+        k-=i
