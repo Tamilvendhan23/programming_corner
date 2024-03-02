@@ -28,3 +28,12 @@ A thing begun is half done
 Output:
 no
 ------------------------------solution-----------------------------
+#Your code below
+s = input().strip().split()
+
+for i in range(1,len(s)):
+    if s[i][-1].lower() != s[i-1][0].lower():
+        print("no")
+        break
+else:
+    print("yes")
