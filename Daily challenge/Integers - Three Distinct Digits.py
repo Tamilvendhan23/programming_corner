@@ -38,4 +38,15 @@ Output:
 -1
 
 ---------------------------solution------------------------
+def ddd(num):
+    return len(set(str(num))) >= 3
+
+N = int(input())
+integers = list(map(int, input().split()))
+
+result = [str(num) for num in integers if ddd(num)]
+if result:
+    print(' '.join(result))
+else:
+    print(-1)
 
