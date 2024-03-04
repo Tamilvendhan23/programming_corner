@@ -35,3 +35,10 @@ Input:
 
 Output:
 3 7 1 4 8
+
+
+
+n=int(input())
+l=list(map(int,input().split()))
+sn=sorted(l,key=lambda num: bin(num)[2:].count('0'))
+print(*sn)
