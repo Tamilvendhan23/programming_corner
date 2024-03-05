@@ -35,5 +35,8 @@ Output:
 fmpii
 
   ----------------------------solution----------------------
-
+x=input().strip()
+y=input().split()
+for i in range(len(x)):
+    print(y[int(x[i])],end="")
 
