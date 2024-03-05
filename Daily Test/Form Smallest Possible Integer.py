@@ -28,3 +28,11 @@ Output:
 10000001111112223333345566889999
 
  ---------------------solution---------------------
+
+s=list(input().strip())
+s.sort()
+for i in range(len(s)):
+    if s[i]!='0':
+        s.insert(0,s.pop(i))
+        break
+print(*s,sep='')
