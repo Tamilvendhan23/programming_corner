@@ -47,3 +47,34 @@ Output:
 
 -----------------Solution---------------
 
+n = int(input())
+
+li = [list(map(int, input().split())) for i in range(n)]
+
+k = int(input())
+
+r = 0
+
+c = 0
+
+for i in range(2*n + 1):
+
+C = 0
+
+for j in range(2*n + 1):
+
+if i%2==0 or j%2==0:
+
+else:
+
+print(k,end="")
+
+print(li[r][c],end="")
+
+C+=1
+
+if c==n:
+
+r+=1
+
+print()
