@@ -33,3 +33,13 @@ Output:
 
 
 -----------------------solution-------------++
+      
+#Your code below
+n = int(input())
+l =3
+k =2
+
+for i in range(1,n+1):
+    print(k,end = " ")
+    k+=l
+    l+=2
