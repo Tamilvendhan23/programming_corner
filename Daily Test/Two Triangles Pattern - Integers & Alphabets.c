@@ -41,4 +41,41 @@ Output:
 34 35 * * * * * * * * h i 
 36 * * * * * * * * * * j
 -----------------------solution---------------
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+int n,m=0;
+scanf("%d",&n);
+char a = 'a';
+for(int i=0;i<n;i++){
+    if(i <= n/2){
+    for(int j=0;j<=i;j++){
+        printf("%d ",++m);
+    }for(int j = 0;j<(n-1)-(2*i);j++){
+        printf("* ");
+    }
+    for(int j = 0;j<=i;j++){
+        printf("%c ",a++);
+        if(a >'z'){
+            a='a';
+        }
+    }}
+    else{
+        for(int j=0;j<(n)-i;j++){
+            printf("%d ",++m);
+            }
+        for(int j =0;j<(i-(n/2))*2;j++){
+            printf("* ");
+        }
+        for(int j =0;j<(n)-i;j++){
+            printf("%c ",a++);
+            if(a>'z')
+                a='a';
+        }
+    }
+    printf("\n");
+}
+}
 
