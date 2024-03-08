@@ -1,0 +1,12 @@
+A table called virus is created with the following DDL command:
+
+create table virus (id int, name varchar(30), totaldeaths int);
+Write the Java code using JDBC APIs to select the id, name and totaldeaths from the table virus whose totaldeaths is greater than 10000.
+
+Note:
+The order of the columns in the result set must be id, name and totaldeaths.
+The result set must be ordered by the column name in alphabetical order.
+
+IMPORTANT:
+1. Place your code inside the execute method. You need not code/implement the main method.
+2. DO NOT close the Database Connection conn in your code.
