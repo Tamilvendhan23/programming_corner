@@ -46,3 +46,17 @@ Output:
 
 
 ------------------_---- solution---------------------
+#Your code below
+n=int(input())
+l=list(map(int,input().split()))
+i=0
+while(len(l)>i):
+    i+=1
+    if i&1:
+        print(*l[:i])
+        l=l[i:]
+    else:
+        print(*l[-i:])
+        l=l[:-i]
+if len(l)!=0:
+    print(*l)
