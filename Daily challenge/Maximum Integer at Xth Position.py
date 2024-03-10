@@ -9,7 +9,7 @@ Boundary Condition(s):
 Input Format:
 The first line contains N and X separated by a space.
 The second line contains N integers separated by a space.
-
+ 
 Output Format:
 The first line contains the N integers separated by a space based on the given conditions.
 
