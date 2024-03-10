@@ -35,3 +35,23 @@ Aeiou
 
 Output:
 Aeiou
+
+-------------------------solution-------------------------------
+
+s=input().strip()
+v='AEIOUaeiou';c=0
+for i in range(len(s)):
+    if s[i] not in v:
+        c+=1
+        if c==1:
+            print("["+s[i],end="")
+        else:
+            print(s[i],end="")
+        if i==len(s)-1:
+            print("]",end="")
+    else:
+        if c>=1:
+            print("]"+s[i],end="")
+        else:
+            print(s[i],end="")
+        c=0
