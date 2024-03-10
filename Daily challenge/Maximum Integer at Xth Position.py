@@ -33,3 +33,16 @@ Input:
 
 Output:
 45 89 36 24 23 12
+
+----------------------solution-----------------
+
+#Your code below
+n,x=map(int,input().split())
+l=list(map(int,input().split()))
+p=max(l)
+l=sorted(l)
+l=l[::-1]
+l.pop(0)
+
+m=l[:x-1]+[p]+l[x-1:]
+print(*m)
