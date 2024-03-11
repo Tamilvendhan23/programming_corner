@@ -1,5 +1,3 @@
-
-
 The program must accept an integer array of size N and an integer K as the input. The program must reverse the alternate sub-arrays of size K in the given array. Then the program must print the N integers in the modified array as the output. If there are no K integers in the last sub-array then reverse the remaining integers in that sub-array.
 
 Boundary Condition(s):
@@ -46,4 +44,17 @@ Input:
 
 Output:
 8 5 7 1 2
+      ========================================solution=============================
+def reverse_alternate_subarray(arr, K):
+    for i in range(0, len(arr), 2*K):
+        arr[i:i+K] = reversed(arr[i:i+K])
+    return arr
 
+# Read input
+N = int(input())
+arr = list(map(int, input().split()))
+K = int(input())
+
+# Reverse alternate sub-arrays and print the modified array
+result = reverse_alternate_subarray(arr, K)
+print(' '.join(map(str, result)))
