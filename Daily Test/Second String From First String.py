@@ -23,3 +23,16 @@ robOt
 Output:
 no
 --------------------------solution--------------------------
+#Your code below
+a=input().strip().lower()
+b=input().strip().lower()
+c=0
+for i in b:
+    if i in a and a.count(i)==b.count(i):
+        c+=1
+if c==len(b):
+    print("yes")
+else:
+    print("no")
+
+        
