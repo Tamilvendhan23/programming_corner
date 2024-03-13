@@ -1,5 +1,3 @@
-
-
 The program must accept N string values and sort them. Then the program must print the first and the last string values.
 
 Boundary Condition(s):
@@ -39,3 +37,14 @@ bluebell rose bluebell sunflower
 Output:
 bluebell
 sunflower
+=======================solution-======================================
+
+N = int(input())
+strings = input().split()
+
+
+strings.sort()
+
+print(strings[0])
+print(strings[-1])
+
