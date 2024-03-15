@@ -21,4 +21,16 @@ Output:
 |stay|home|stay|safe|
 +----+----+----+----+
   -------------------------------------------solution-------------------------------------------
-  
+
+a=list(input().split())
+x="|"
+y="+"
+for i in a:
+    x+=i+"|"
+    p=len(i)
+    c="-"*p
+    y+=c+"+"
+    
+print(y)
+print(x)
+print(y)
