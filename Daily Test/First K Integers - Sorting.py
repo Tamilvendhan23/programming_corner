@@ -30,4 +30,14 @@ Input:
 Output:
 NO
 ================================solution===============================
+N = int(input())
+numbers = list(map(int, input().split()))
+K = int(input())
+
+sorted_first_K = sorted(numbers[:K])
+
+if sorted(numbers) == sorted_first_K + numbers[K:]:
+    print("YES")
+else:
+    print("NO")
 
