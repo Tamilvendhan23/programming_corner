@@ -25,3 +25,10 @@ Output:
 134 1887 1887 91 91 91 880 880 880
 
 ---------------------------solution------------------------------
+from collections import Counter 
+def ntr(a):
+    f=Counter(a)
+    return sorted(a,key=lambda x:(f[x],x))
+n=int(input())
+l=list(map(int,input().split()))
+l=ntr(l);print(*l)
