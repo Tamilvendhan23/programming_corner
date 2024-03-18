@@ -31,4 +31,18 @@ Output:
 8 9 10 11 12 13 14 15
 16 17 18 19 20 * * * * * * * * * * *
 -----------------------------------------solution--------------------
-
+#Your code below
+n=int(input())
+i=1
+row=2
+while i<=n:
+    while i<row:
+        if i<=n:
+            print(i,end=' ')
+        else:
+            print('*',end=' ')
+            
+        i+=1
+    row*=2
+   
+    print()
