@@ -48,3 +48,16 @@ abc 2
 ijk 4
 stu 1
 xyz 3
+
+----------------solution--------------
+
+n=int(input())
+a=[input().strip() for i in range(n)]
+l=sorted(set(a))
+print(len(l))
+for i in range(len(l)):
+    print(l[i],end=" ")
+    for j in range(n):
+        if a[j]==l[i]:
+            print(j+1,end=" ")
+    print()
