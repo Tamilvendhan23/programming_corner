@@ -28,3 +28,12 @@ Output:
 *     *
   -------------------------------------------solution---------------------------------------------
   
+n = int(input())
+lis = [' ' for _ in range(n)]
+ans = []
+for i in range(n//2 + 1):
+    lis[i] = lis[-i-1] = '*'
+    print(*lis, sep='')
+    ans.append(lis[:])
+for i in ans[:-1][::-1]:
+    print(*i, sep='')
