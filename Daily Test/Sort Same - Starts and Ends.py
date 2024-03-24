@@ -46,4 +46,16 @@ river
 steps
 window
 ----------------------------solution----------------------------------------
-  
+n=int(input());v=[];k=[];c=0
+for i in range(n):
+    s=input().strip()
+    v.append(s)
+    if s[0]==s[-1]:
+        k.append(s)
+k.sort()
+for i in range(0,n):
+    if v[i][0]==v[i][-1]:
+        print(k[c])
+        c=c+1
+    else:
+        print(v[i])  
