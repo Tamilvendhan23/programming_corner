@@ -21,3 +21,9 @@ Input:
 Output:
 5
    --------------------------------solution--------------------------------
+A,B,C = map(int,input().strip().split())
+d=0
+for i in range(A,B+1):
+    if(str(C) in str(i)):
+        d+=1
+print(d)
