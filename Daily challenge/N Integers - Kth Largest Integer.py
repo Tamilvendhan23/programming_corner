@@ -26,4 +26,9 @@ Output:
 79
 ----------------solution------------------------
 
+#Your code below
+n,k=map(int,input().split())
+l=list(map(int,input().rstrip().split()))
+s=sorted(list(set(l)),reverse=True)
+print(s[k-1])
 
