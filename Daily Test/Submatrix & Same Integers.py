@@ -36,3 +36,20 @@ Input:
 2
 Output:
 no
+---------------------soluiton------------------------
+x=int(input())
+m=[]
+f=0
+for i in range(x):
+    a=list(map(int,input().split()))
+    m.append(a)
+y=int(input())
+for i in range(0,x,y):
+    for j in range(0,x,y):
+        n=m[i][j]
+        for a in range(i,i+y):
+            for b in range(j,j+y):
+                if n!=m[a][b]:
+                    f=1
+                    break
+print("yes" if f==0 else "no")
