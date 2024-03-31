@@ -22,17 +22,16 @@ Output:
 ---------------------------solutioin------------------------
 s = input().strip()
 
-max_length = 0
-current_length = 0
+a = []
 
-for digit in s:
-    if digit == '1':
-        current_length += 1
-        max_length = max(max_length, current_length)
+c = 0
+
+for i in s:
+    if i == '1':
+        c += 1
+        a.append(c)
     else:
-        current_length = 0
+        c = 0
 
-if max_length > 0:
-    print(max_length)
-else:
-    print(-1)
+print(max(a) if a else -1)
+
