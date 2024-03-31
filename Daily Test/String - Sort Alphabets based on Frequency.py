@@ -24,3 +24,14 @@ Example Input/Output 3:
 Input: aaaBBBcCdddd
 Output: ddddBBBaaaCc
 ----------------solution----------------
+ #Your code below
+s=input().strip()
+r=sorted(s)
+d={}
+for i in r:
+    d[i]=d.get(i,0)+1
+di=dict(sorted(d.items(),key=lambda items:items[1],reverse=True))
+m=""
+for i in di:
+    m+=i*di[i]
+print(m)
