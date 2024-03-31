@@ -18,3 +18,11 @@ Input:
 skillrack 4
 Output:
 skil kill illr llra lrac rack
+---------------solution----------------------------
+def substrings_of_length_k(string, k):
+    for i in range(len(string) - k + 1):
+        print(string[i:i+k], end=" ")
+
+s, k = input().split()
+k = int(k)
+substrings_of_length_k(s, k)
