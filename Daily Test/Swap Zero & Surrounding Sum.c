@@ -56,3 +56,46 @@ Output:
 11 0 7 0 15 0 0 11
 
   -----------------------solution---------------------------
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    int a;
+    scanf("%d\n",&a);
+    int aa[a][a];
+    for(int j=0;j<a;j++){
+        for(int k=0;k<a;k++){
+            scanf("%d ",&aa[j][k]);
+        }
+    }
+    for(int j=0;j<a;j++){
+        for(int k=0;k<a;k++){
+            if(aa[j][k]==0){
+                if(j-1>-1){
+                    aa[j][k]+=aa[j-1][k];
+                    aa[j-1][k]=-999;
+                }
+                if(k-1>-1){
+                    aa[j][k]+=aa[j][k-1];
+                    aa[j][k-1]=-999;
+                }
+                if(j+1<a){
+                    aa[j][k]+=aa[j+1][k];
+                    aa[j+1][k]=-999;
+                }
+                if(k+1<a){
+                    aa[j][k]+=aa[j][k+1];
+                    aa[j][k+1]=-999;
+                }
+            }
+        }
+    }
+    for(int j=0;j<a;j++){
+        for(int k=0;k<a;k++){
+            if(aa[j][k]==-999)
+            printf("0 ");
+            else
+            printf("%d ",aa[j][k]);
+        }printf("\n");
+}
