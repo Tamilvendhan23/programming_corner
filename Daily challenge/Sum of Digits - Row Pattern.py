@@ -45,3 +45,14 @@ Output:
 
 
 ----------------------solution---------------------
+n,x=map(int,input().split())
+c=n
+p=0
+for i in range(x):
+    s=0
+    l=str(c)*n
+    for j in range(n):
+        print(l[j],end='')
+        s+=int(l[j])
+    c=s
+    print()
