@@ -35,3 +35,16 @@ skillrack.com
 www.skillrack.in
 Output:
 4
+-----------------------------------solution-----------------------------------------
+  n=int(input())
+l=[]
+for i in range(n):
+    a=input()
+    l.append(a)
+d=[]
+for i in l:
+    dd=i.split('www.')[-1]
+    d.append(dd)
+k=[i.rstrip("\r") for i in d]
+c=set(k)
+print(len(c))
