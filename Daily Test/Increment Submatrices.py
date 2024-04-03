@@ -44,3 +44,17 @@ Output:
 2 2 3 3 1 0
 2 2 3 3 1 0
 0 0 1 1 1 0
+-----------------------------------solution--------------------
+#Your code below
+r,c=map(int,input().split())
+n=int(input())
+l=[]
+for i in range(n):
+    l.append(list(map(int,input().split())))
+m=[[0 for i in range(c)] for j in range(r)]
+for u in l:
+    for i in range(u[0]-1,u[2]):
+        for j in range(u[1]-1,u[3]):
+            m[i][j]+=1
+for i in m:
+    print(*i)
